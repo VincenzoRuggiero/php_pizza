@@ -1,5 +1,9 @@
 <?php
-
+if (isset($_POST['submit'])) {
+    echo htmlspecialchars($_POST['email']);
+    echo htmlspecialchars($_POST['title']);
+    echo htmlspecialchars($_POST['ingredients']);
+}
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +13,7 @@
 
 <section class="container grey-text">
     <h4 class="center">Aggiungi la tua pizza</h4>
-    <form action="" method="POST" class="white">
+    <form action="add.php" method="POST" class="white">
         <label for="email">La tua eMail</label>
         <input type="email" name="email">
 
@@ -20,7 +24,7 @@
         <input type="text" name="ingredients">
 
         <div class="center">
-            <input type="submit" name="submit" value="submit" class="btn brand">
+            <input type="submit" name="submit" value="Invia" class="btn brand">
         </div>
     </form>
 </section>
